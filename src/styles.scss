@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+
+.container {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.content-in-center {
+    justify-content: center;
+}

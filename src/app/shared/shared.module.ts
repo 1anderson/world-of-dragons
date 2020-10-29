@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastComponent } from './components/toast/toast.component';
+import { InterceptorModule } from './components/interceptor/interceptor.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ToastComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
-  ]
+    HttpClientModule,
+    FormsModule,
+    InterceptorModule
+  ],
+  exports: [ FormsModule, ToastComponent ]
 })
 export class SharedModule { }

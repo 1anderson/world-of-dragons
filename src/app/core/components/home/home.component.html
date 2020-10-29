@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div *ngIf="state$ | async as state" class="col">
+  <app-toast>asasasasa</app-toast>
+     <table>
+        <caption>Lista de Dragões</caption>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>tipo</th>
+            <th>açoes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dragon of state.dragons">
+            <td> <input type="text"  [name]="dragon.name"
+                required
+                [(ngModel)]="dragon.name" name="name"></td>
+            <td><input type="text"  [name]="dragon.name"
+                required
+                [(ngModel)]="dragon.type" name="name"></td>
+            <td><button [disabled]="canUpdate(dragon)" (click)="updateDragon(dragon)"><img src="assets/icons/edit.svg" alt="Edit Dragon"></button> <img src="assets/icons/delete.svg" alt="Delete Dragon" (click)="deleteDragon(dragon.id)"></td>
+          </tr>
+         </tbody>
+      </table>
+</div>
