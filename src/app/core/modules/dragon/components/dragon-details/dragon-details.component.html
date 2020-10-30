@@ -1,0 +1,18 @@
+<div class="row justify-content-center"  *ngIf="state$ | async as state; else dragonNotfound">
+    <div class="container col align-in-center">
+        <div>
+            <span><b>Nome:</b> {{state?.dragon?.name}}</span><br>
+            <span><b>Tipo:</b> {{state?.dragon?.type}}</span><br>
+            <span><b>Data de Criação:</b> {{state?.dragon?.createdAt}}</span><br>
+        </div>
+            <button  class="button-neutral button back-button" routerLink="/home">Voltar</button>
+        
+    </div>
+</div>
+
+<ng-template #dragonNotfound>
+    <div class="d-flex align-items-center flex-column">
+        Dragão Não encontrado ou problema na conexão<br/> 
+       <button  class="button-neutral button" routerLink="/home">Voltar</button>
+    </div>
+</ng-template>

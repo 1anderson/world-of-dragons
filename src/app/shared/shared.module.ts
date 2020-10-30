@@ -16,6 +16,6 @@ import { InterceptorModule } from './components/interceptor/interceptor.module';
     FormsModule,
     InterceptorModule
   ],
-  exports: [ FormsModule, ToastComponent ]
+  exports: [ FormsModule, ToastComponent, ReactiveFormsModule ]
 })
 export class SharedModule { }

@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+    <app-toast>
+    {{message}}
+    </app-toast>
+    
+    <div class="input-margin">
+        <label for="nome">Nome </label>
+        <input type="text" class="form-control" name="name" id="name" formControlName="name">
+    </div>
+
+    <div class="input-margin">
+        <label for="nome">Tipo </label>
+        <input type="text" class="form-control" name="type" id="type" formControlName="type" class="input-margin-tipo">
+    </div>
+    <div>
+        <button (click)="createDragon()" class="button-confirm button">Criar</button>
+        <button  routerLink="/home"  class="button-neutral button">Voltar</button>
+    </div>
+</form>

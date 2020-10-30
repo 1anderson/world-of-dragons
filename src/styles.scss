@@ -14,3 +14,37 @@
 .content-in-center {
     justify-content: center;
 }
+
+.align-in-center {
+    align-items: center;
+}
+
+.icon-red { color: red; }
+
+.icon-green { color:green }
+
+.icon-blue { color: blue;}
+
+.button {
+    border: none;
+    color: white;
+    padding: 9px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-confirm {
+    background-color: #4CAF50;
+}
+
+.button-neutral {
+    background-color: lightgrey ;
+}
+
+.input-margin {
+    margin: 20px 0;
+}

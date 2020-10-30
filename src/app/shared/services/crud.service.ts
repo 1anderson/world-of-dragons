@@ -16,10 +16,15 @@ export class CrudService {
     return this.http.get<T>(`${this.apiUrl}/${resourcePath}`);
   }
 
+  post<T>(resourcePath: string, body: any): Observable<T> {
+    return this.http.post<T>(`${this.apiUrl}/${resourcePath}`, body);
+  }
+
+  put<T>(resourcePath: string, body: any): Observable<T> {
+    return this.http.put<T>(`${this.apiUrl}/${resourcePath}`, body);
+  }
+
   delete<T>(resourcePath: string): Observable<any> {
-    // return this.http.get<T>(`${this.apiUrl}/${resourcePath}`);
-    return new Observable(observer => {
-      observer.next(true);
-    });
+    return this.http.delete<T>(`${this.apiUrl}/${resourcePath}`);
   }
 }

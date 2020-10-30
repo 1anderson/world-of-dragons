@@ -13,7 +13,7 @@ table {
   }
   
   table tr {
-    background-color: #f8f8f8;
+    background-color: white;
     border: 1px solid #ddd;
     padding: .35em;
   }
@@ -78,3 +78,16 @@ table {
       border-bottom: 0;
     }
   }
+
+  :host {
+    width: 80%;
+  }
+
+  .input-table {
+    border: none;
+  }
+
+.title-coluns {
+    position: relative;
+    right: 64px;
+}

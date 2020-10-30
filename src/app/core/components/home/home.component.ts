@@ -12,7 +12,6 @@ import { HomeFacadeService } from '../../services/home-facade.service';
 export class HomeComponent implements OnInit {
   @ViewChild(ToastComponent) toast!: ToastComponent;
   state$: Observable<any>;
-
   constructor(private homeFacadeService: HomeFacadeService, private router: Router) { }
 
   ngOnInit(): void {
@@ -21,12 +20,11 @@ export class HomeComponent implements OnInit {
   }
 
   deleteDragon(dragonId: number) {
-    this.homeFacadeService.deleteDragon(dragonId);
+    this.homeFacadeService.deleteDragon(dragonId, this.toast);
   }
 
   updateDragon(dragon: any) {
-    console.log(dragon);
-    this.toast.showMessage();
+    this.homeFacadeService.updateDragon(dragon, this.toast);
   }
 
   canUpdate(dragon) {

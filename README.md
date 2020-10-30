@@ -1,5 +1,11 @@
 # WorldOfDragons
 
+
+# TODO 
+
+Não deu tempo de fazer testes, então realizei alguns testes "bestinhas" no home-facade
+A interface está simples por causa do tempo.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
 ## Development server
